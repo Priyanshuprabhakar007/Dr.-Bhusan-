@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 700" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Soft Medical Glow -->
+    <radialGradient id="bgBodyGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#18B8B4" stop-opacity="0.18" />
+      <stop offset="60%" stop-color="#2DD4BF" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#073F3D" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Translucent Body Gradient -->
+    <linearGradient id="bodyOuterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.85" />
+      <stop offset="35%" stop-color="#14B8A6" stop-opacity="0.80" />
+      <stop offset="70%" stop-color="#0D9488" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.70" />
+    </linearGradient>
+
+    <!-- Inner Translucent Body Fill -->
+    <linearGradient id="bodyFillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0F2FE" stop-opacity="0.55" />
+      <stop offset="50%" stop-color="#CCFBF1" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#E0F2FE" stop-opacity="0.50" />
+    </linearGradient>
+
+    <!-- Organ Gradients -->
+    <radialGradient id="headBrainGrad" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.1" />
+    </radialGradient>
+
+    <linearGradient id="tracheaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0D9488" stop-opacity="0.2" />
+    </linearGradient>
+
+    <radialGradient id="lungLeftGrad" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.65" />
+      <stop offset="70%" stop-color="#0F766E" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#0F766E" stop-opacity="0.05" />
+    </radialGradient>
+
+    <radialGradient id="heartGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F43F5E" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#991B1B" stop-opacity="0.1" />
+    </radialGradient>
+
+    <radialGradient id="digestiveGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.5" />
+      <stop offset="80%" stop-color="#059669" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#047857" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="kidneyGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0369A1" stop-opacity="0.15" />
+    </radialGradient>
+
+    <radialGradient id="pelvisGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#4338CA" stop-opacity="0.1" />
+    </radialGradient>
+
+    <!-- Soft Blur for Internal Medical Lighting -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Torso Glow -->
+  <ellipse cx="200" cy="270" rx="110" ry="160" fill="url(#bgBodyGlow)" />
+
+  <!-- 1. SUBTLE SKELETON / VERTEBRAL AXIS & RIBCAGE -->
+  <g opacity="0.35" stroke="#38BDF8" stroke-width="1.2" fill="none">
+    <!-- Spine -->
+    <path d="M 200 110 L 200 370" stroke-dasharray="4 2" />
+    <!-- Ribs -->
+    <path d="M 172 185 C 185 175 215 175 228 185" />
+    <path d="M 168 200 C 182 190 218 190 232 200" />
+    <path d="M 166 215 C 180 205 220 205 234 215" />
+    <path d="M 168 230 C 182 220 218 220 232 230" />
+    <path d="M 172 245 C 185 235 215 235 228 245" />
+    <!-- Clavicles -->
+    <path d="M 200 148 Q 165 145 135 155" />
+    <path d="M 200 148 Q 235 145 265 155" />
+    <!-- Pelvis outline -->
+    <path d="M 152 330 C 150 370 250 370 248 330 C 220 385 180 385 152 330 Z" stroke-width="1" />
+  </g>
+
+  <!-- 2. FULL BODY SILHOUETTE (PROPORTIONAL TRANSLUCENT HUMAN) -->
+  <!-- Outer Stroke and Translucent Fill -->
+  <path d="
+    M 200 40 
+    C 222 40 238 56 238 78
+    C 238 96 226 112 216 122
+    C 214 125 213 130 214 138
+    C 232 142 262 148 276 158
+    C 286 166 288 185 284 215
+    C 280 245 274 280 270 310
+    C 267 335 265 370 263 410
+    C 261 430 257 435 253 430
+    C 251 415 252 380 252 340
+    C 252 315 252 290 252 270
+    C 252 310 253 345 253 385
+    C 251 405 248 420 246 445
+    C 243 480 241 515 239 550
+    C 237 575 236 610 235 635
+    C 234 650 233 662 230 668
+    C 226 675 218 676 215 670
+    C 212 662 215 645 216 630
+    C 218 600 220 565 221 530
+    C 222 490 221 450 218 420
+    C 212 388 206 375 200 370
+    C 194 375 188 388 182 420
+    C 179 450 178 490 179 530
+    C 180 565 182 600 184 630
+    C 185 645 188 662 185 670
+    C 182 676 174 675 170 668
+    C 167 662 166 650 165 635
+    C 164 610 163 575 161 550
+    C 159 515 157 480 154 445
+    C 152 420 149 405 147 385
+    C 148 345 148 310 148 270
+    C 148 290 148 315 148 340
+    C 148 380 149 415 147 430
+    C 143 435 139 430 137 410
+    C 135 370 133 335 130 310
+    C 126 280 120 245 116 215
+    C 112 185 114 166 124 158
+    C 138 148 168 142 186 138
+    C 187 130 186 125 184 122
+    C 174 112 162 96 162 78
+    C 162 56 178 40 200 40 Z"
+    fill="url(#bodyFillGrad)"
+    stroke="url(#bodyOuterGrad)"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- 3. INTERNAL ORGAN ILLUSTRATION (TRANSLUCENT & APPROACABLE) -->
+
+  <!-- Head / Brain Contour -->
+  <ellipse cx="200" cy="72" rx="24" ry="26" fill="url(#headBrainGrad)" />
+  <path d="M 182 72 Q 200 58 218 72 Q 200 86 182 72 Z" fill="#38BDF8" opacity="0.15" />
+
+  <!-- Throat / Trachea -->
+  <path d="M 196 112 L 196 155 Q 200 158 204 155 L 204 112 Z" fill="url(#tracheaGrad)" />
+  <g stroke="#14B8A6" stroke-width="0.8" opacity="0.5">
+    <line x1="196" y1="120" x2="204" y2="120" />
+    <line x1="196" y1="128" x2="204" y2="128" />
+    <line x1="196" y1="136" x2="204" y2="136" />
+    <line x1="196" y1="144" x2="204" y2="144" />
+  </g>
+
+  <!-- Lungs (Right & Left) -->
+  <!-- Right Lung -->
+  <path d="
+    M 192 165
+    C 172 168 152 180 150 210
+    C 148 238 160 258 185 252
+    C 192 250 194 230 192 200 Z"
+    fill="url(#lungLeftGrad)"
+    stroke="#2DD4BF"
+    stroke-width="0.8"
+    opacity="0.85"
+  />
+  <!-- Left Lung -->
+  <path d="
+    M 208 165
+    C 228 168 248 180 250 210
+    C 252 238 240 258 215 252
+    C 208 250 206 230 208 200 Z"
+    fill="url(#lungLeftGrad)"
+    stroke="#2DD4BF"
+    stroke-width="0.8"
+    opacity="0.85"
+  />
+
+  <!-- Heart & Aorta -->
+  <ellipse cx="206" cy="212" rx="14" ry="16" fill="url(#heartGrad)" opacity="0.75" />
+  <path d="M 202 190 Q 200 170 208 165" stroke="#F43F5E" stroke-width="2" fill="none" opacity="0.6" />
+
+  <!-- Digestive System: Stomach & Intestines -->
+  <!-- Stomach -->
+  <path d="
+    M 190 260
+    C 175 262 170 282 188 288
+    C 205 292 215 280 205 268
+    C 198 260 195 258 190 260 Z"
+    fill="url(#digestiveGrad)"
+    stroke="#34D399"
+    stroke-width="0.8"
+    opacity="0.8"
+  />
+  <!-- Intestines (Loops) -->
+  <g fill="none" stroke="#2DD4BF" stroke-width="1.2" opacity="0.65" filter="url(#softGlow)">
+    <path d="M 180 295 C 190 290 210 290 220 295 C 225 305 215 315 200 310 C 185 305 175 318 185 328 C 195 338 215 330 222 322 C 225 335 210 345 195 342" />
+  </g>
+
+  <!-- Kidneys (Bilateral) -->
+  <ellipse cx="172" cy="272" rx="7" ry="11" fill="url(#kidneyGrad)" stroke="#38BDF8" stroke-width="0.6" opacity="0.8" />
+  <ellipse cx="228" cy="272" rx="7" ry="11" fill="url(#kidneyGrad)" stroke="#38BDF8" stroke-width="0.6" opacity="0.8" />
+
+  <!-- Bladder / Pelvic Region -->
+  <ellipse cx="200" cy="358" rx="12" ry="9" fill="url(#pelvisGrad)" stroke="#818CF8" stroke-width="0.8" opacity="0.8" />
+
+  <!-- Lymphatic / Vascular System Nodes (Subtle Points) -->
+  <g fill="#2DD4BF" opacity="0.6">
+    <!-- Cervical Nodes -->
+    <circle cx="188" cy="118" r="1.8" />
+    <circle cx="212" cy="118" r="1.8" />
+    <circle cx="190" cy="132" r="1.8" />
+    <circle cx="210" cy="132" r="1.8" />
+    <!-- Axillary Nodes -->
+    <circle cx="148" cy="165" r="2.2" />
+    <circle cx="252" cy="165" r="2.2" />
+    <!-- Inguinal Nodes -->
+    <circle cx="176" cy="368" r="2" />
+    <circle cx="224" cy="368" r="2" />
+  </g>
+
+</svg>

@@ -1,0 +1,27 @@
+name = "dr-bhushan-api"
+main = "worker.ts"
+compatibility_date = "2026-03-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Cloudflare D1 Database Binding
+[[d1_databases]]
+binding = "DB"
+database_name = "dr-bhushan-cms"
+database_id = "d1-dr-bhushan-parmar-production"
+
+# Cloudflare R2 Public Media Bucket Binding (Public website assets)
+[[r2_buckets]]
+binding = "PUBLIC_MEDIA"
+bucket_name = "dr-bhushan-public-media"
+preview_bucket_name = "dr-bhushan-public-media-preview"
+
+# Cloudflare R2 Private Bucket Binding (Confidential patient medical reports - NO PUBLIC ACCESS)
+[[r2_buckets]]
+binding = "PRIVATE_REPORTS"
+bucket_name = "dr-bhushan-private-reports"
+preview_bucket_name = "dr-bhushan-private-reports-preview"
+
+[vars]
+ENVIRONMENT = "production"
+PUBLIC_MEDIA_URL = "https://media.drbhushanparmar.com"
+ALLOWED_ORIGIN = "https://drbhushanparmar.com"

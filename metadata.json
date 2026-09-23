@@ -1,0 +1,6 @@
+{
+  "name": "Dr. Bhushan Parmar – Senior Medical Oncologist",
+  "description": "Premium official website of Dr. Bhushan Parmar, Senior Consultant Medical Oncologist specializing in personalized cancer care, targeted therapy, immunotherapy, and blood malignancies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
